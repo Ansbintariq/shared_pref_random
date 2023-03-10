@@ -1,4 +1,4 @@
-# shared_prefrnce
+# Get storage as well as shared pref 
 
 A new Flutter project.
 
