@@ -7,42 +7,40 @@ import 'package:shared_prefrnce/screens/loginpage.dart';
 class LoginUser {
   dynamic? saveEmail;
 
-  saveUser(String email, String password) async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
+  // saveUser(String email, String password) async {
+  //   SharedPreferences preferences = await SharedPreferences.getInstance();
 
-    if (email == 'user@test.com' && password == "pakistan") {
-      preferences.setBool("login", true);
-      if (email != null) {
-        saveEmail = preferences.setString("email", email);
-      }
-      Get.to(() => HomePage());
-      print("ok email password");
-    } else {
-      print("worng email password");
-      preferences.setBool("login", false);
+  //   if (email == 'test.com' && password == "123456") {
+  //     preferences.setBool("login", true);
+  //     // if (email != null) {
+  //     //   saveEmail = preferences.setString("email", email);
+  //     // }
+  //     Get.to(() => HomePage());
+  //     print("ok email password");
+  //   } else {
+  //     print("worng email password");
+  //     preferences.setBool("login", false);
 
-      ///Get.to(() => LoginPage());
-    }
-  }
+  //     ///Get.to(() => LoginPage());
+  //   }
+  // }
 
-  logOut(email) async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
+  // logOut() async {
+  //   SharedPreferences preferences = await SharedPreferences.getInstance();
+  //   preferences.setBool("login", false);
+  //   Get.to(() => LoginPage());
+  // }
 
-    preferences.setBool("login", false);
-    saveEmail = preferences.getString("email");
-    Get.to(() => LoginPage());
-  }
+  // readSaveUser() async {
+  //   SharedPreferences preferences = await SharedPreferences.getInstance();
+  //   //if value is null at first time will store false value
+  //   bool saveStatus = preferences.getBool("login") ?? false;
 
-  readSaveUser() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    //if value is null at first time will store false value
-    bool saveStatus = preferences.getBool("login") ?? false;
-
-    if (saveStatus == true) {
-      Get.to(() => HomePage());
-    } else {
-      Get.to(() => LoginPage());
-      saveEmail = preferences.getString("email");
-    }
-  }
+  //   if (saveStatus == true) {
+  //     Get.to(() => HomePage());
+  //   } else {
+  //     Get.to(() => LoginPage());
+  //     saveEmail = preferences.getString("email");
+  //   }
+  // }
 }

@@ -3,7 +3,10 @@ import 'package:get/get.dart';
 import 'package:shared_prefrnce/screens/get_started.dart';
 import 'package:shared_prefrnce/screens/loginpage.dart';
 
+import 'controller/login_controller.dart';
+
 void main() {
+  Get.put(LoginController());
   runApp(const MyApp());
 }
 
